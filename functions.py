@@ -15,7 +15,7 @@ def update(screen, cells, size, with_progress = False):
         alive = max(0, alive)
         color = BG_COLOR if cells[row,col] == 0 else ALIVE_NEXT_COLOR
 
-        if cells[row,col] == 1:
+        if cells[row, col] == 1:
             if alive < 2 or alive > 3:
                 if with_progress:
                     color = DIE_NEXT_COLOR
@@ -65,7 +65,7 @@ def running():
         if run:
             cells = update(screen, cells, 10, with_progress=True)
             pygame.display.update()
-            time.sleep(1)
+            time.sleep(0.5)
 
 
 
